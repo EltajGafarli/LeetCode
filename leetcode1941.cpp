@@ -1,0 +1,13 @@
+class Solution {
+public:
+    bool areOccurrencesEqual(string s) {
+      int arr[26] = {0};
+      for(int i = 0;i < s.length();i ++){
+        arr[s[i] - 'a'] ++;
+      }
+      for(int i = 0;i < s.length();i++){
+        if(arr[s[0] - 'a'] != arr[s[i] - 'a']) return false;
+      }
+      return true;
+    }
+};
